@@ -176,3 +176,15 @@ td {
 th {
     background-color: #f2f2f2;
 }
+
+.mainpage_link:link{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.mainpage_link:visited{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
