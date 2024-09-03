@@ -168,6 +168,20 @@ td {
     font-weight: bold;
 }
 
+td a {
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 .mainpage_link:link {
     color: blue;
     background-color: transparent;
