@@ -31,6 +31,10 @@ header {
     text-align: center;
 }
 
+header h1 {
+    font-size: 7vh;
+}
+
 main {
     grid-area: main;
     flex: 1;
@@ -72,6 +76,7 @@ footer {
 
 .navbar ul li {
     margin: 0;
+    font-size: 3vh;
 }
 
 .navbar ul li a {
@@ -91,7 +96,6 @@ footer {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
     max-width: 100%;
     margin-bottom: 20px;
 }
@@ -188,8 +192,34 @@ td a:visited {
     text-decoration: none;
 }
 
+.mainpage_link:hover {
+    text-decoration: underline;
+}
+
 .mainpage_link:visited {
     color: blue;
     background-color: transparent;
     text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+    header,
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
 }
