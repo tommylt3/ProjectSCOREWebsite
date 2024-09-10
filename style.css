@@ -1,11 +1,3 @@
-:root {
-    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, serif;
-}
-
-.element {
-    font-family: var(--system-ui);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -32,36 +24,15 @@ body {
 }
 
 header {
+    grid-area: header;
     background-color: rgba(197, 34, 34, 0.774);
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-nav {
-    background-color: #333;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    display: block;
-    padding: 14px 20px;
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 10px;
+header h1 {
+    font-size: 7vh;
 }
 
 main {
@@ -90,10 +61,34 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-bottom: 0;
 }
 
-div {
-    margin-bottom: 20px;
+.navbar {
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0;
+    font-size: 3vh;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 10px;
 }
 
 .profile-card {
@@ -101,8 +96,8 @@ div {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
     max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .profile-img {
@@ -148,21 +143,25 @@ div {
     text-decoration: underline;
 }
 
+h3 {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
 hr.rounded {
     border-top: 3px solid #bbb;
     border-radius: 5px;
     margin: 20px 0 20px;
 }
 
-h3 {
-    margin-bottom: 10px;
-    text-decoration: underline;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+}
+
+th {
+    background-color: #f2f2f2;
 }
 
 th,
@@ -173,18 +172,54 @@ td {
     font-weight: bold;
 }
 
-th {
-    background-color: #f2f2f2;
+td a {
+    text-decoration: none;
 }
 
-.mainpage_link:link{
+td a:hover {
+    text-decoration: underline;
+}
+
+td a:visited {
     color: blue;
     background-color: transparent;
     text-decoration: none;
 }
 
-.mainpage_link:visited{
+.mainpage_link:link {
     color: blue;
     background-color: transparent;
     text-decoration: none;
+}
+
+.mainpage_link:hover {
+    text-decoration: underline;
+}
+
+.mainpage_link:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+
+    header,
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
 }
